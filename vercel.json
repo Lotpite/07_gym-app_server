@@ -4,6 +4,6 @@
       { "src": "yarn run build", "use": "@vercel/node" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "dist/index.js" }
+      { "src": "/(.*)", "dest": "dist/src/index.js" }
     ]
   }
