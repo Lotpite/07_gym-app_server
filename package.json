@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node .\\dist\\src\\index.js",
     "dev": "nodemon --inspect .\\dist\\src\\index.js",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "build": "tsc"
   },
   "dependencies": {
     "@types/dotenv": "^8.2.0",
