@@ -5,10 +5,10 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon src/index.ts",
-  "build": "rimraf dist && tsc",
-  "ts.check": "tsc --project tsconfig.json",
-  "add-build": "git add dist",
-  "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --inspect .\\dist\\src\\index.js",
     "watch": "tsc -w"
   },

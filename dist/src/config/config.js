@@ -7,7 +7,7 @@ exports.config = void 0;
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 const DB_URL = process.env.DB_URL || "";
-const SERVER_PORT = process.env.SERVER_PORT || 4001;
+const SERVER_PORT = process.env.SERVER_PORT;
 exports.config = {
     mongo: {
         url: DB_URL,
