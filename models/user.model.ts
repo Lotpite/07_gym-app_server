@@ -39,6 +39,7 @@ const UserSchema: Schema = new Schema(
               sets: [
                 {
                   id: { type: Number },
+                  order: { type: Number },
                   reps: { type: Number },
                 },
               ],
