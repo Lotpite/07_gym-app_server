@@ -108,3 +108,27 @@ export const deleteUser = async (
     )
     .catch((error) => res.status(500).json({ error }));
 };
+
+export const addTrainToUser = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  const { email, newTrain } = req.body;
+  try {
+    const candidate = await userModel.findOne({ email });
+    if (candidate) {
+      await userModel.updateOne(
+        { email },
+        { $push: { "gym.trainings": newTrain } }
+      );
+      res.status(200).json({
+        message: "Train has been added",
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      message: "Error occurs",
+    });
+  }
+};
