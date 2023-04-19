@@ -20,6 +20,8 @@ const user_router_1 = __importDefault(require("../routes/user.router"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)({
     origin: "*",
+    methods: "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+    allowedHeaders: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization",
 }));
 const jsonBodyMiddleware = express_1.default.json();
 app.use(jsonBodyMiddleware);
