@@ -14,10 +14,18 @@ export const allowCors = (req: Request, res: Response, next: NextFunction) => {
 
   //Preflight CORS handler
   if (req.method === "OPTIONS") {
-    return res.status(200).json({
-      body: "OK",
-    });
-  }
+    res.setHeader("Access-Control-Allow-Origin", req.headers.origin || "");
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, PUT, PATCH, OPTIONS, DELETE"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
 
-  next();
+    res.status(200).end();
+  } else {
+    next();
+  }
 };
