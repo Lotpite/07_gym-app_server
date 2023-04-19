@@ -5,7 +5,11 @@ import { config } from "./config/config";
 import router from "../routes/user.router";
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://gympit-b.vercel.app/",
+  })
+);
 const jsonBodyMiddleware = express.json();
 app.use(jsonBodyMiddleware);
 app.use("/", router);

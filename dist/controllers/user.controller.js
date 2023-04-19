@@ -32,7 +32,7 @@ const createUser = (req, res, next) => __awaiter(void 0, void 0, void 0, functio
                 gym: {
                     trainings: [
                         {
-                            id: "1673560800000",
+                            id: "4/13/2023",
                             exercises: [
                                 {
                                     id: "pushup",

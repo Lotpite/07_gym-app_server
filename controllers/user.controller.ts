@@ -22,7 +22,7 @@ export const createUser = async (
           gym: {
             trainings: [
               {
-                id: "1673560800000",
+                id: "4/13/2023",
                 exercises: [
                   {
                     id: "pushup",
