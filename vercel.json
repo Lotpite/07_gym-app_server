@@ -7,10 +7,15 @@
             "config": { "includeFiles": ["dist/**"] }
         }
     ],
-    
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "dist/src/index.js"
+        }
+    ],
     "headers": [
       {
-        "source": "*",
+        "source": "/(.*)",
         "headers": [
           {
             "key": "Access-Control-Allow-Origin",
