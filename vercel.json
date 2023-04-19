@@ -12,16 +12,5 @@
             "src": "/(.*)",
             "dest": "dist/src/index.js"
         }
-    ],
-    "headers": [
-        {
-          "source": "/login",
-          "headers": [
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "https://gympit.vercel.app"
-            }
-          ]
-        }
-      ]
+    ]
 }
