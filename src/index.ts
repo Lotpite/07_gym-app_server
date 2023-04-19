@@ -7,7 +7,7 @@ import router from "../routes/user.router";
 const app = express();
 app.use(
   cors({
-    origin: "*",
+    origin: "https://07-gym-app-client-lotpite.vercel.app/",
   })
 );
 const jsonBodyMiddleware = express.json();
