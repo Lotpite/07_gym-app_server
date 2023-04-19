@@ -7,7 +7,7 @@ import router from "../routes/user.router";
 const app = express();
 app.use(
   cors({
-    origin: "https://gympit-b.vercel.app/",
+    origin: "https://gympit-b.vercel.app",
   })
 );
 const jsonBodyMiddleware = express.json();
