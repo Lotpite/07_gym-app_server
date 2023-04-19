@@ -15,7 +15,7 @@
     ],
     "headers": [
         {
-          "source": "/*",
+          "source": "/login",
           "headers": [
             {
               "key": "Access-Control-Allow-Origin",
