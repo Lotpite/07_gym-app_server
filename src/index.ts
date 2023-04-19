@@ -3,10 +3,13 @@ import cors from "cors";
 import mongoose from "mongoose";
 import { config } from "./config/config";
 import router from "../routes/user.router";
-import { allowCors } from "./config/corsConfig";
 
 const app = express();
-app.use(allowCors);
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 const jsonBodyMiddleware = express.json();
 app.use(jsonBodyMiddleware);
 app.use("/", router);
