@@ -19,7 +19,7 @@ const config_1 = require("./config/config");
 const user_router_1 = __importDefault(require("../routes/user.router"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)({
-    origin: "*",
+    origin: "http://localhost:3000/",
 }));
 const jsonBodyMiddleware = express_1.default.json();
 app.use(jsonBodyMiddleware);
