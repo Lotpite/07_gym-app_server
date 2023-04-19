@@ -13,16 +13,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const cors_1 = __importDefault(require("cors"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const config_1 = require("./config/config");
 const user_router_1 = __importDefault(require("../routes/user.router"));
+const corsConfig_1 = require("./config/corsConfig");
 const app = (0, express_1.default)();
-app.use((0, cors_1.default)({
-    origin: "*",
-    methods: "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-    allowedHeaders: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization",
-}));
+app.use(corsConfig_1.allowCors);
 const jsonBodyMiddleware = express_1.default.json();
 app.use(jsonBodyMiddleware);
 app.use("/", user_router_1.default);

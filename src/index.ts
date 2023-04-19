@@ -3,16 +3,10 @@ import cors from "cors";
 import mongoose from "mongoose";
 import { config } from "./config/config";
 import router from "../routes/user.router";
+import { allowCors } from "./config/corsConfig";
 
 const app = express();
-app.use(
-  cors({
-    origin: "*",
-    methods: "GET,OPTIONS,PATCH,DELETE,POST,PUT",
-    allowedHeaders:
-      "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization",
-  })
-);
+app.use(allowCors);
 const jsonBodyMiddleware = express.json();
 app.use(jsonBodyMiddleware);
 app.use("/", router);
