@@ -26,7 +26,7 @@ app.use(jsonBodyMiddleware);
 app.use("/", user_router_1.default);
 const start = () => __awaiter(void 0, void 0, void 0, function* () {
     yield mongoose_1.default
-        .connect(config_1.config.mongo.url, { retryWrites: true, w: "majority" })
+        .connect(config_1.config.mongo.url)
         .then(() => console.log("Connected to DataBase successful"))
         .catch((error) => console.log("Failed to connect to DataBase", error));
     app.listen(config_1.config.server.port, () => {

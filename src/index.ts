@@ -16,7 +16,7 @@ app.use("/", router);
 
 const start = async () => {
   await mongoose
-    .connect(config.mongo.url, { retryWrites: true, w: "majority" })
+    .connect(config.mongo.url)
     .then(() => console.log("Connected to DataBase successful"))
     .catch((error) => console.log("Failed to connect to DataBase", error));
 
